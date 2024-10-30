@@ -7,11 +7,13 @@ const AddTodo = () => {
   const setTodoList = useSetRecoilState(todoListState);
 
   const addTodo = () => {
-    setTodoList((oldList) => [
-      ...oldList,
-      { id: Date.now(), title, isComplete: false },
-    ]);
-    setTitle('');
+    if (title.trim()) {
+      setTodoList((oldList) => [
+        ...oldList,
+        { id: Date.now(), title, isComplete: false },
+      ]);
+      setTitle('');
+    }
   };
 
   return (
@@ -19,11 +21,11 @@ const AddTodo = () => {
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Add new todo"
-        className="border p-2 mr-2"
+        placeholder="Memorize the dictionary"
+        className="border border-gray-300 p-2 mr-2"
       />
-      <button onClick={addTodo} className="bg-blue-500 text-white px-4 py-2">
-        Add
+      <button onClick={addTodo} className="bg-customPurple text-white px-4 py-2 rounded">
+        Add Item
       </button>
     </div>
   );
