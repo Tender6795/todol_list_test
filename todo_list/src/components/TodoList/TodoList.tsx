@@ -15,9 +15,11 @@ const TodoList = () => {
   return (
     <div className="p-4 space-y-4"> {/* Adds vertical space between items */}
       {todoList.map((todo) => (
-        <div key={todo.id} className="flex flex-col gap-2">
-          {/* Divider above the checkbox and text */}
-          <div className="h-px bg-gray-300 w-full" /> 
+        <div key={todo.id} className="flex flex-col">
+          {/* Divider starts aligned with the start of the text and extends to the right */}
+          <div className="h-px bg-gray-300 w-full ml-8 mb-2" /> {/* Full width with margin */}
+          
+          {/* Checkbox and Text */}
           <div className="flex items-center">
             <label className="flex items-center cursor-pointer">
               <input
