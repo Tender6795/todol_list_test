@@ -6,8 +6,8 @@ import TodoList from '../components/TodoList/TodoList';
 const App = () => {
   return (
     <RecoilRoot>
-      <div className="max-w-lg mx-auto">
-        <h1 className="text-2xl font-bold text-center my-4">Todo List</h1>
+      <div className="max-w-lg mx-auto mt-10">
+        <h1 className="text-2xl font-bold mb-4 ml-2">Todo List</h1>
         <TodoList />
         <AddTodo />
       </div>
