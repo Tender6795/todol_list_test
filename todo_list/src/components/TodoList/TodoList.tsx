@@ -27,7 +27,7 @@ const TodoList = () => {
                 className="hidden"
               />
               <span
-                className={`flex h-5 w-5 rounded-full border-2 border-customPurple flex-shrink-0 
+                className={`flex h-5 w-5 rounded-full border-4 border-customPurple flex-shrink-0 
                             ${
                               todo.isComplete ? 'bg-customPurple' : 'bg-white'
                             }`}
